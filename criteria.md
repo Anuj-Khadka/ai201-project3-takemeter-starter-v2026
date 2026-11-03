@@ -54,11 +54,10 @@ whether you hit them:
 ## 1.
 
 <!-- Your criterion. It must name a number. -->
-
-
+Overall accuracy is at least 0.70 on the test set.
 
 **Why this target:**
-
+There are 3 labels, so a random guess is right about 33% of the time. 0.70 means the model really learned the difference, not just random guessing.
 
 
 ---
@@ -66,11 +65,10 @@ whether you hit them:
 ## 2.
 
 <!-- Your criterion. -->
-
-
+Every label has an F1 of at least 0.60 on the test set.
 
 **Why this target:**
-
+I don't want one label to be much worse than the others. I set it lower than overall accuracy because my smallest label (showcase) has a few test examples, so its score will jump around.
 
 
 ---
@@ -78,11 +76,10 @@ whether you hit them:
 ## 3.
 
 <!-- Your criterion. -->
-
-
+No label is more than 50% of my data.
 
 **Why this target:**
-
+If one label is too big, the model learns to just guess it. The project cap is 70%. but I want mine more even than that.
 
 
 ---
@@ -90,23 +87,21 @@ whether you hit them:
 ## 4.
 
 <!-- Your criterion. -->
-
-
+If someone else labels the same posts, we agree at least 80% of the time.
 
 **Why this target:**
-
+If two people cannot agree on a label, the model cannot learn it either. 80% means my rules are clear enough to follow.
 
 
 ---
 
-## 5.
+## 5. <!-- refined later with AI-->
 
 <!-- Your criterion. -->
-
-
+On the third of predictions the model is most sure about, accuracy is at least 0.80.
 
 **Why this target:**
-
+A confident wrong answer is worse than an unsure one. I want the model to be right when it is most sure.
 
 
 ---
