@@ -42,7 +42,11 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+r/personalfinance
 
+- poeple ask for advice on budgeting, debt, retirement accounts and investing.
+- Most posts there are questions.
+- The post varies a lot in how much a reader has to work with: some give income, balances and a stated plan while others just ask for "what should I do?"
 
 ---
 
