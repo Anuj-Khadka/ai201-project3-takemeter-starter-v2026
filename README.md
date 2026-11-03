@@ -42,11 +42,19 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-r/personalfinance
+r/cooking
 
-- poeple ask for advice on budgeting, debt, retirement accounts and investing.
-- Most posts there are questions.
-- The post varies a lot in how much a reader has to work with: some give income, balances and a stated plan while others just ask for "what should I do?"
+A community where home cooks post recipes, ask for help, and talk about
+technique and ingredients. My classifier sorts posts by what the post is
+*doing* — not by whether it's any good. Three candidate distinctions I saw
+while reading:
+
+- **Help requests** — the poster has a specific problem and wants it solved
+  ("how do I make tofu flavourful?", "where should I probe a ribeye?").
+- **Showcases** — the poster shares something they made or a swap they tried
+  ("my fajita soup recipe", "mayo in meatballs — don't knock it").
+- **Discussions** — open questions inviting the community to share opinions or
+  favorites ("what's your favorite spice?", "hand-pulled vs cut noodles?").
 
 ---
 
@@ -58,35 +66,94 @@ r/personalfinance
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `help`
 
-**Definition:**
+**Definition:** The poster has a specific cooking problem or question and wants a concrete answer or fix. The person is asking about their own dish or problem. 
 
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
 
 **Example 1:**
->
+>  *How to make tofu flavourful?* — 
+> I know, I know. Age old question. I’ve tried crumbling it, shredding it, marinating overnight, even freezing it then cutting it once thawed. No matter what I do, I can’t make my tofu flavourful.
+> My only success was when I made a coconut curry with tofu, but then every bite of tofu also had some sauce/soup. I want to eat more tofu that just curries though. What more can I do?
+
+> https://www.reddit.com/r/Cooking/comments/1x4wksg/how_to_make_tofu_flavourful/
+
+
+
 
 **Example 2:**
->
+> *Where should I probe a ribeye?* — 
+> Hey all,
+> Every time I cook a ribeye on the stovetop (stainless steel pan, sear, flip, baste in butter), it ends up medium when I’m aiming for medium rare.
+> The weird part is the temperature readings. When I probe the middle of the steak I always get a low number, but the fat cap reads much higher. Tonight I pulled it when the center hit 108°F and the cap was already at 137°F. After a 5-minute rest it was a perfect medium when I cut into it. 
+> These big temperature swings seem to only happen with ribeyes. Is this a common thing, or am I doing something wrong?
+> I’m starting to think I should just probe the cap from now on, since the center reading never seems to line up with the final doneness.
+
+> https://www.reddit.com/r/Cooking/comments/1x4kewz/where_should_i_probe_a_ribeye/
+
+
+### `showcase`
+
+**Definition:** The poster shares a dish, recipe, result, or swap they made or tried, presented as a statement rather than a question.
+
+**Example 1:**
+> *My "fajita soup" recipe* — 
+> Fajita soup
+> 2 lb ground chicken
+> 4-6 cups chicken stock
+> 1 Onion diced
+> 2 packets taco seasoning
+> 2 cups rice
+> 1 can Goya black beans
+> 5-6 cloves of garlic
+> 1-3 green peppers, chopped
+> 2 tablespoons olive oil
+> Juice of 2 limes
+> Small dash of Beer to add liquid/acidity to meat
+> Brown ground chicken with olive oil in a large Dutch oven and add taco seasoning. Add the juice of 1 of the limes and add beer. Once browned, remove chicken and add another tablespoon of oil to begin cooking onion, garlic, and green peppers with the other lime until onions are golden/translucent. Add rice, beans, and chicken stock and then bring to a boil. Simmer for about 15 minutes or until rice is cooked and liquid has largely evaporated. Garnish with cilantro and tortilla chips. Can add cheese or sour cream as desired.
+> What do you all think? I came up with this recipe and mostly did it without precise measurements so these are estimates.
+
+> https://www.reddit.com/r/Cooking/comments/1xbbiul/my_fajita_soup_recipe/
+
+**Example 2:**
+> *Mayo in meatballs* — 
+> "Don’t knock it until you try it. I once recently out of eggs and needed a quick substitute. This was the best thing I could think of at the time thinking mayo is made out of eggs anyway!!! It ended up turning out amazing and I probably will do it again ! know it sounds super weird and probably super American LOL but if you are out of eggs and in a pinch I approve this swap 🙂"
+
+
+> https://www.reddit.com/r/Cooking/comments/1xaonvl/mayo_in_meatballs/
+
+
+
+### `discussion`
+
+**Definition:** The poster asks an open-ended question inviting the community to share opinions, favorites, or experiences, with no single correct answer. The person is asking a general question to everyone.
+
+**Example 1:**
+>  *What's your favorite spice?* — 
+> "Mine is definitely chilli pepper. I add it to everything."
+
+> https://www.reddit.com/r/Cooking/comments/1x4i6ro/whats_your_favorite_spice/
+
+**Example 2:**
+> *Which is better: hand pulled noodles or cut noodles?* — 
+> Weither for pan fried noodles or soup noodles, which is better, hand pulled noodles (like la mian or biangbiang or any other type) or the ones cut by hand? Like what difference it makes between the 2? Is it chewiness, or does any of the 2 holds sauce better, or what?
+
+> https://www.reddit.com/r/Cooking/comments/1x4ix03/which_is_better_hand_pulled_noodles_or_cut_noodles/
+
+
+
+
+
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** showcase vs discussion
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
 
-
+Classify by the point of the post. If the main idea if that the poster is presenting their own dish, recipe, or result, it is `showcase`, even if it ends with "what do you think?". If the main idea is inviting others to contribute theirs, it is `discussion`. A title phrased "what's your favorite X?" is `discussion` even when the poster also shares their own answer.
 
 ---
 
