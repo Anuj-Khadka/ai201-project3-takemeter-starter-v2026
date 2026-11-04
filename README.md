@@ -211,17 +211,17 @@ I labelled the first 15 posts as "cold", just by myself using my own rules for l
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** distilbert-base-uncased
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** <!-- epochs, learning rate, batch size, seed --> seed 42, 3 epochs, lr 2e-05, batch 16
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** Just the labels
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
-
-
+train 60,  val 13,  test 14
+Per-label counts in the test split: help 4, showcase 4, discussion 6
 
 ---
 
@@ -236,17 +236,30 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
+- *What I asked for:* 
+I asked Claude to pressure-test my 3 label definitions (write tricky posts that sit between two labels) and to pre-label the posts I hadn't labelled.
+
 - *What came back:*
+It gave me 8 boundary posts, and a draft label for each post.
+
 - *What I changed:*
+The boundary test showed my help-vs-discussion line were not clear. So, I added a clearer rule. I also reviewed every prelabel and fixed the ones that I disagreed with.
+
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* 
+I asked Claude to write me a short Python script to help me extract around 300 posts from subreddit /cooking.
 
-**Pre-labelling disclosure:**
+- *What came back:*
+Claude wrote a small Python script that pulled posts from Reddit's public data. But when I ran it, Reddit blocked it with a "403 blocked" error. So, it got 0 posts. 
+
+- *What I changed:*
+I realized that reddit had blocked Claude access to Reddit. Therefore, I pivoted to chatGPT to help me with the post, and since the subreddit was quite small, I was only able to get around 87 unique posts.
+
+
+**Pre-labelling disclosure:** 
+I labelled the first 15 posts by myself (no-AI at all) and labelled it `cold`. Then the other 72 were prelabelled by Claude, and I read and corrected each one of them. Those pre-labelled are labelled as `pre_label`.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
