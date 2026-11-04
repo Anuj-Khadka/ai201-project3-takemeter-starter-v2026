@@ -163,18 +163,20 @@ Classify by the point of the post. If the main idea if that the poster is presen
      cases. -->
 
 **Where the posts came from:**
+All the posts came from r/Cooking. I collected 87 real posts for this milestone. Each row is the post title and the first part of the body. 
+
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+I labelled the first 15 posts as "cold", just by myself using my own rules for labeling. For the remaining 72 posts, I used an AI tool to pre-label them first. Then, I went over all of them and fixed any label that I felt was wrong. These are marked as "pre_label"
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| help | 23 | 26% |
+| showcase | 28 | 32% |
+| discussion | 36 | 42% |
+| **Total** | 87 | 100% |
 
 **Three hard cases**
 
@@ -182,25 +184,26 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
+> *The post:*  "What's your favorite use for the $5 Costco chicken?"
+
+
+> *Could have been:* showcase or discussion
+
+> *I chose, because:* "discussion" - the main point is asking the group to share their uses. My rule says a "what's your favorite X?" kind of questions as discussion.
 
 **2.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
+> *The post:*  "What's my Potato Salad Missing?"
+
+> *Could have been:* showcase or help
+
+> *I chose, because:* "help" - they want a fix for their own dish, not just to show it off. 
 
 **3.**
-> *The post:*
->
-> *Could have been:*
->
-> *I chose, because:*
+> *The post:* "What can I do with teriyaki sauce?"
+
+> *Could have been:* help or discussion
+
+> *I chose, because:* "discussion" - the is no single right answer, and it is an open-ended ask for ideas from the group, not a specific problem to solve.
 
 ---
 
